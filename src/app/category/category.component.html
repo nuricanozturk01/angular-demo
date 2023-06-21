@@ -1,0 +1,9 @@
+<div class="nav-scroller py-1 mb-3 border-bottom">
+  <nav class="nav nav-underline justify-content-center">
+    <a *ngFor="let c of getAllCategories()" routerLink="products/category/{{c.id}}"
+       class="nav-item nav-link link-body-emphasis active">{{c.name}}</a>
+
+    <a  routerLink="products"
+       class="nav-item nav-link link-body-emphasis active">All Products</a>
+  </nav>
+</div>

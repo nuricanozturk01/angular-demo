@@ -1,0 +1,32 @@
+<div class="mb-3">
+  <input class="form-control" id="search" placeholder="Search" [(ngModel)]="FilterText">
+    <div *ngIf="FilterText" class="form-text">Product not found!</div>
+
+</div>
+
+<!--<nav class="navbar bg-body-tertiary">
+  <div class="container">
+    <a class="navbar-brand" style=" text-align: right;margin: auto; color: green">
+      <h3 style="text-align: center; padding-top: 1%; padding-bottom: 1%" *ngIf="getAllProducts(); else noProduct">{{title}}</h3>
+    </a>
+  </div>
+</nav>-->
+
+<div class="row">
+<!--  <ng-template #noProduct>
+    <div class="alert alert-primary" role="alert">
+      Products not exists!
+    </div>
+  </ng-template>-->
+
+  <div *ngFor="let p of getAllProducts() | productFilter:FilterText" class="card" style="width: 18rem;">
+    <img ngSrc="{{p.image}}" width="180" height="200" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{p.name}}  {{p.price | currency: '₺':true :"1.2-2"}}</h5>
+      <p class="card-text">{{p.description}}</p>
+      <a (click)=" isAddToCart = addToCart(p)" style="padding-bottom: 10px" class="btn btn-primary">Add Cart</a>
+
+    </div>
+  </div>
+
+</div>
