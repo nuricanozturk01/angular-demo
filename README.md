@@ -5,6 +5,7 @@
 ### Dependencies
   - npm
   - angular
+  - bootstrap
   - json-server (files on fake_db)
     - category service port: 4040
     - product service port: 3000
@@ -12,11 +13,12 @@
   - BTK Academy
 ### Photos
 
-  - ![ss1](https://github.com/nuricanozturk01/angular-demo/assets/62218588/e45c91ec-72d6-4d83-bfca-832a8857f16e)
+ - ![ss1](https://github.com/nuricanozturk01/angular-demo/assets/62218588/f36fae06-2b9a-40f8-aa3e-323a86cab4c7)
+ - ![ss2](https://github.com/nuricanozturk01/angular-demo/assets/62218588/365ece88-1ac2-404b-bfe5-c158cc231adb)
+ - ![ss3](https://github.com/nuricanozturk01/angular-demo/assets/62218588/62c53476-761a-4836-9316-0a99c0e9b1b4)
 
-  - ![ss2](https://github.com/nuricanozturk01/angular-demo/assets/62218588/f12da7a9-a10e-40d8-9347-3a12f5d4a517)
 
-  - ![ss3](https://github.com/nuricanozturk01/angular-demo/assets/62218588/8f45d73e-bd90-4b92-af22-363d7c701546)
+
 
 
 
