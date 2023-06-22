@@ -1,0 +1,45 @@
+<h3>Add Product Reactive</h3>
+
+<form [formGroup]="productAddForm" (ngSubmit)="add()">
+
+  <div class="form-group">
+    <input type="text" id="name" formControlName="name" name="name" class="form-control" placeholder="Product Name">
+    <div  class="alert alert-danger" *ngIf="productAddForm.get('name')?.hasError('required') && productAddForm.get('name')?.dirty"> Must enter Product Name</div>
+  </div>
+  <br>
+  <div class="form-group">
+    <input type="text" id="description" formControlName="description" name="description" placeholder="Description" class="form-control">
+    <div  class="alert alert-danger" *ngIf="productAddForm.get('description')?.hasError('required') && productAddForm.get('description')?.dirty">
+      Must enter Description</div>
+  </div>
+  <br>
+
+  <div class="form-group">
+    <input type="text" id="image" formControlName="image" name="image" placeholder="Image" class="form-control">
+    <div  class="alert alert-danger" *ngIf="productAddForm.get('image')?.hasError('required') && productAddForm.get('image')?.dirty">
+      Must enter Image</div>
+  </div>
+
+  <br>
+
+  <div class="form-group">
+    <input type="text" id="price" formControlName="price" name="price" placeholder="Price" class="form-control">
+    <div  class="alert alert-danger" *ngIf="productAddForm.get('price')?.hasError('required') && productAddForm.get('price')?.dirty">
+      Must enter Price</div>
+  </div>
+
+  <br>
+
+  <div class="form-group">
+    <select class="form-control" formControlName="categoryId" required id="categoryId" name="categoryId">
+      <option *ngFor="let category of categoryList"  [value]="category.id"> {{category.name}} </option>
+    </select>
+    <div class="alert alert-danger" *ngIf="productAddForm.get('categoryId')?.hasError('required') && productAddForm.get('categoryId')?.touched">
+      Must enter Category!</div>
+  </div>
+
+  <br>
+
+  <button type="submit" class="btn btn-primary" [disabled]="productAddForm.invalid"> Add Product</button>
+
+</form>
