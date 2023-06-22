@@ -1,0 +1,17 @@
+<main class="form-signin w-100 m-auto">
+  <form #productAddForm="ngForm" (ngSubmit)="login(productAddForm)" class="form-signin">
+
+    <h1 class="h3 mb-3 fw-normal" style="text-align: center">Login</h1>
+
+    <div class="form-floating">
+      <input type="text" #username="ngModel" [(ngModel)]="model.userName" [ngModelOptions]="{standalone: true}" name="username" class="form-control" id="usrname" placeholder="username">
+      <label for="usrname">Username</label>
+    </div>
+    <div class="form-floating">
+      <input type="password" #pass="ngModel" [(ngModel)]="model.password" [ngModelOptions]="{standalone: true}"  class="form-control" id="passw" placeholder="Password">
+      <label for="passw">Password</label>
+    </div>
+
+    <button class="btn btn-primary w-100 py-2" type="submit">Login</button>
+  </form>
+</main>
