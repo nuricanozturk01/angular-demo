@@ -8,6 +8,8 @@
   - json-server (files on fake_db)
     - category service port: 4040
     - product service port: 3000
+### Resources
+  - BTK Academy
 ### Photos
 
   - ![ss1](https://github.com/nuricanozturk01/angular-demo/assets/62218588/e45c91ec-72d6-4d83-bfca-832a8857f16e)
